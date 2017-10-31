@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+.panel-title{
+	font-weight:bold;
+	color:black;
+}
+.questionTitle div{
+	float:left;
+}
+.modal-title{
+	width:700px;
+}
+.questionResult{
+	float:right;
+	background-color:#DFDFDF;
+	margin-left:10px;
+	font-weight:bold;
+}
+
+.answerItem{
+	clear:both;
+}
+.answer{
+	clear:both;
+}
+.questionNumber{
+	width:30px;
+	height:30px;
+	background-color:#00F;
+	color:white;
+	text-align:center;
+}
+.score{
+	width:20px;
+	height:30px;
+	color:#00f;
+	font-size:18px;
+	font-weight:bold;
+}
+
+.answerCards{
+	border:1px solid #CFEFED;
+	width:220px;
+	height:300px;
+	position:fixed;
+	top:100px;
+}
+.answerCard{
+	border:1px solid #C8FFE3;
+	width:42px;
+	height:42px;
+	float:left;
+	text-align:center;
+	line-height:42px;
+	margin-left:1px;
+	margin-top:1px;
+}
+.answeredCard{
+	background-color:#A6FFA6;
+}
+
+/*examAnalysis.html*/
+.modal-dialog{
+	width:800px;
+	}
+.modal-body input,.modal-body select,.modal-body button{
+	height:28px;
+	border-radius:3px;
+}
+.tjTitle{
+	border:1px solid #F3F3F3;
+	height:35px;
+	line-height:35px;
+	font-weight:bold;
+	font-size:14px;
+}
+.tjLabel,.tjContent{
+	border:1px solid #F3F3F3;
+	font-size:14px;
+	height:30px;
+	line-height:30px;
+}
+.tjLabel{
+	background-color:#F5F5F5;
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+   #from,#to{
+	   border:1px solid green;
+	   height:100px;
+	   width:100px;
+   }
+   div[name='item']{
+	   border:1px solid yellow;
+	   height:20px;
+   }
+</style>
+<script type="text/javascript">
+    function drap(ev,obj){
+		ev.dataTransfer.setData("Text",obj.id);
+	}
+	
+	function dragover(ev){
+		ev.preventDefault();
+	}
+	
+	function drop(ev,obj){
+		ev.preventDefault();
+		var id = ev.dataTransfer.getData("Text");
+		alert(id);
+		obj.appendChild(document.getElementById(id));
+	}
+</script>
+</head>
+
+<body>
+<div id="from">
+  <div id="item1" name="item" draggable="true" ondragstart="drap(event,this)">
+  item1
+  </div>
+  <div id="item2" name="item" draggable="true" ondragstart="drap(event,this)">
+  item2
+  </div>
+  <div id="item3" name="item" draggable="true" ondragstart="drap(event,this)">
+  item3
+  </div>
+  <div id="item4" name="item" draggable="true" ondragstart="drap(event,this)">
+  item4
+  </div>
+</div>
+<br/>
+<br/>
+<div id="to" ondragover="dragover(event)" ondrop="drop(event,this)">
+  <div name="item">
+  1item1
+  </div>
+  
+</div>
+</body>
+</html>

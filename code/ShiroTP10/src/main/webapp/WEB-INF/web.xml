@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>ShiroTP09</display-name>
+  <!-- 设置配置文件 -->
+  <context-param>
+    <param-name>shiroConfigLocations</param-name>
+    <!-- 
+    <param-value>classpath:shiro_myWebEvn.ini</param-value>
+    
+    <param-value>classpath:shiro_authczFilter.ini</param-value>
+    <param-value>classpath:shiro_onceFilter.ini</param-value>
+     -->
+    <param-value>classpath:shiro_shiroRealm.ini</param-value>
+    
+  </context-param>
+  <!-- 
+  <context-param>
+     <param-name>shiroEnvironmentClass</param-name>
+     <param-value>cn.com.shiro.book.tp10.web.env.MyIniWebEnviroment</param-value>
+  </context-param>
+   -->
+   <!-- 设置环境初始化监听器 -->
+  <listener>
+    <listener-class>org.apache.shiro.web.env.EnvironmentLoaderListener</listener-class>
+  </listener>
+  <!-- 设置ShiroFilter入口 -->
+  <filter>
+    <filter-name>ShiroFilter</filter-name>
+    <filter-class>org.apache.shiro.web.servlet.ShiroFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ShiroFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+    <dispatcher>INCLUDE</dispatcher>
+    <dispatcher>ERROR</dispatcher>
+  </filter-mapping>
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

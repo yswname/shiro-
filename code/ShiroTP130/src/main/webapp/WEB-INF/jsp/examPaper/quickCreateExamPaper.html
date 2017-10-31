@@ -1,0 +1,502 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/main.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>创阳教育在线考试系统</title>
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.min.css">
+<script src="../bootstrap/js/jquery-3.2.1.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+
+<style type="text/css">
+   body{
+	   min-width:1024px;
+   }
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid">
+   <nav class="navbar navbar-default navbar-fixed-top bg-primary col-md-12  col-sm-12 col-xs-12"  role="banner">
+   <div class="navbar-header" style="margin-left:20px;">
+      <img src="../images/cyedu.jpg" width="132" height="50" class=" img-rounded"/>
+   </div>
+   <span data-toggle="collapse" href="#leftNav" class="navbar-brand glyphicon glyphicon-align-justify" style="margin-left:20px;"></span>
+   
+   <ul class="nav navbar-nav navbar-right">
+     <li><a href="#"><img src="../images/icos/menu_account.png" class="img-circle"/>admin(管理员)</a></li><li><a>|</a></li>
+     <li><a href="#">账号</a></li><li><a>|</a></li>
+     <li><a href="#">反馈问题</a></li><li><a>|</a></li>
+     <li style="margin-right:20px;"><a href="#">退出</a></li>
+   </ul>
+  </nav>
+  
+  <div class="row " style="margin-top:55px;">
+     <!--左边折叠式导航-->
+     <div id="leftNav"  class="col-sm-2 col-md-2  col-sm-2 col-xs-2 collapse in">
+        <div class="panel-group" id="accodion">
+           <!--题库管理-->
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                 <h4 class="panel-title">
+                   <a data-toggle="collapse" data-parent="#accodion" href="#questionBankCollapse"><img src="../images/icos/menu_qdb.png" class="img-rounded"/>&nbsp;&nbsp;题库管理</a>
+                 </h4>
+              </div>
+              
+              <div id="questionBankCollapse" class=" panel-collapse collapse in">
+                   <ul class="panel-body nav nav-pills nav-stacked">
+                    <li><a href="../questionBank/addQuestionBank.html">新增题库</a></li>
+                    <li><a href="../questionBank/questionBankList.html">题库列表</a></li>
+                    <li><a href="../questionBank/addQuestion_1.html">新增试题</a></li>
+                    <li><a href="../questionBank/importQuestions.html">导入试题</a></li>
+                    <li><a href="../questionBank/questionList.html">管理试题</a></li>
+                  </ul>
+              </div>
+           </div>
+           
+           <!--试题管理-->
+           <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accodion" href="#examPaperCollapse"><img src="../images/icos/menu_paper.png" class="img-rounded"/>&nbsp;&nbsp;试卷管理</a>
+                </h4>
+              </div>
+              
+              <div id="examPaperCollapse" class="panel-collapse collapse in">
+                 <ul class=" panel-body nav nav-pills nav-stacked">
+                   <li><a href="examPaperTypeList.html">分类管理</a></li>
+                   <li><a href="createExamPaper.html">创建试卷</a></li>
+                   <li><a href="examPaperList.html">试卷管理</a></li>
+                 </ul>
+              </div>           
+           </div>
+           
+           <!--在线学习-->
+           <div class="panel panel-default">
+              <div class="panel-heading">
+                 <h4 class="panel-title">
+                   <a data-toggle="collapse" data-parent="#accodion" href="#onlineLearnCollapse"><img src="../images/icos/menu_learn.png" class="img-rounded"/>&nbsp;&nbsp;在线学习</a>
+                 </h4>
+              </div>
+              <div id="onlineLearnCollapse" class="panel-collapse collapse in">
+                 <ul class="panel-body nav nav-pills nav-stacked">
+                   <li><a href="../online/courseTypeList.html">分类管理</a></li>
+                   <li><a href="../online/courseList.html">课程管理</a></li>
+                 </ul>
+              </div>
+           </div>
+           
+           <!--用户管理-->
+           <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accodion" href="#userCollapse"><img src="../images/icos/menu_users.png" class="img-rounded"/>&nbsp;&nbsp;用户管理</a>
+                  </h4>
+              </div>
+              <div id="userCollapse" class="panel-collapse collapse in">
+                 <ul class="panel-body nav nav-pills nav-stacked">
+                    <li><a href="../user/deptList.html">管理部门</a></li>
+                    <li><a href="../user/classList.html">管理班级</a></li>
+                    <li><a href="../user/roleList.html">管理角色</a></li>
+                    <li><a href="../user/userList.html">管理用户</a></li>
+                 </ul>
+              </div>
+           </div>
+           
+           <!--互动交流-->
+           <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accodion" href="#commuCollapse"><img src="../images/icos/menu_interaction.png" class="img-rounded"/>&nbsp;&nbsp;系统信息</a>
+                  </h4>
+              </div>
+             <div id="commuCollapse" class="panel-collapse collapse in">
+                 <ul class="panel-body nav nav-pills nav-stacked">
+                    <li><a href="#">分类管理</a></li>
+                    <li><a href="#">公告管理</a></li>
+                 </ul>
+              </div>
+           </div>
+           
+           <!--统计分析-->
+           <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accodion" href="#analysisCollapse"><img src="../images/icos/menu_analysis.png" class="img-rounded"/>&nbsp;&nbsp;统计分析</a>
+                  </h4>
+              </div>
+             <div id="analysisCollapse" class="panel-collapse collapse in">
+                 <ul class="panel-body nav nav-pills nav-stacked">
+                    <li><a href="../analysis/paperAnalysisList.html">试卷分析</a></li>
+                    <li><a href="../analysis/examAnalysis.html">考试分析</a></li>
+                    <li><a href="../analysis/scoreAnalysis.html">成绩分析</a></li>
+                 </ul>
+              </div>
+           </div>
+           <!--权限管理-->
+           <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accodion" href="#permissionCollapse"><img src="../images/icos/perms.jpg" width="22" height="24" class="img-rounded"/>&nbsp;&nbsp;权限管理</a>
+                  </h4>
+              </div>
+              <div id="permissionCollapse" class="panel-collapse collapse in">
+                 <ul class="panel-body nav nav-pills nav-stacked">
+                    <li><a href="../permission/resourceList.html">资源管理</a></li>
+                    <li><a href="../permission/roleList.html">角色管理</a></li>
+                    <li><a href="../user/userList.html">分配角色</a></li>
+                    <li><a href="../user/userList.html">分配权限</a></li>
+                 </ul>
+              </div>
+           </div>
+           <!--系统管理-->
+           <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accodion" href="#systemCollapse"><img src="../images/icos/system.png" class="img-rounded"/>&nbsp;&nbsp;系统管理</a>
+                  </h4>
+              </div>
+              <div id="systemCollapse" class="panel-collapse collapse in">
+                 <ul class="panel-body nav nav-pills nav-stacked">
+                    <li><a href="#">角色管理</a></li>
+                    <li><a href="#">系统设置</a></li>
+                    <li><a href="#">系统日志</a></li>
+                    <li><a href="#">关于软件</a></li>
+                 </ul>
+              </div>
+           </div>
+        </div>
+     </div>
+     
+     
+     
+     <div class="col-sm-10  col-md-10  col-sm-10 col-xs-10">
+     
+     <ol class="row breadcrumb">
+        <li><a href="#">首页</a></li>
+        <li><a href="#"><!-- InstanceBeginEditable name="EditRegion4" -->试卷管理<!-- InstanceEndEditable --></a></li>
+        <li><a href="#"><!-- InstanceBeginEditable name="EditRegion5" -->创建试卷<!-- InstanceEndEditable --></a></li>
+     </ol>
+	 <!-- InstanceBeginEditable name="EditRegion3" -->
+     <link type="text/css" href="../bootstrap/css/bootstrap-datetimepicker.min.css"/>
+     <script type="text/javascript" src="../bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+     <script type="text/javascript" src="../bootstrap/js/bootstrap-datetimepicker.zh-CN.js"></script>
+     <div class="row navbar">
+       <button class=" navbar-btn" onClick="location.href='createExamPaper.html'">创建试卷</button>
+       <button class=" navbar-btn btn-primary" onclick="location.href='quickCreateExamPaper.html'">快速创建试卷</button>
+       <button class=" navbar-btn" onclick="location.href='examPaperList.html'">试卷列表</button>
+     </div>
+     
+     <br/>
+     <div class="row">
+     <form class=" form-horizontal" role="form">
+       <div class="row">
+        <div class="form-group">
+          <label for="paperName" class="col-md-offset-1 col-md-1 control-label" style="margin-left:66px">试卷名称</label>
+          <div class="col-md-7">
+          <input type="text" id="paperName" name="paperName" class="form-control" placeholder="试卷名称必须输入" required/>
+          </div>
+        </div>
+       </div>
+       
+       
+       <div class="row">
+         <div class="form-group col-md-5">
+          <label for="paperClassify"  class="col-md-4 control-label">试卷分类</label>
+          <div class="col-md-6">
+          <select name="paperClassify" id="paperClassify" class="form-control" required>
+             <option value="-1">请选择</option>
+             <option value="1">2016年年度考试</option>
+             <option value="2">2017年年度考试</option>
+          </select>
+          </div>
+         </div>
+         
+         <div class="form-group col-md-5">
+          <label for="paperStatus"  class="col-md-4 control-label">试卷状态</label>
+          <div class="col-md-6">
+          <select name="paperStatus" id="paperStatus" class="form-control">
+             <option value="-1">请选择</option>
+             <option value="1">打开</option>
+             <option value="2">关闭</option>
+          </select>
+          </div>
+         </div>
+       </div>
+       
+       <div class="row">
+        <div class="form-group col-md-5">
+          <label for="startTime" class="col-md-4 control-label">开考试卷</label>
+          <div class="col-md-6">
+             <div class="input-append date form_datetime">
+                <input name="startTime" id="startTime" type="text" value="" class=" form-control">
+                <span class="add-on"><i class="icon-th"></i></span>
+            </div>
+             
+          </div>
+        </div>
+        
+        <div class="form-group col-md-5">
+          <label for="endTime" class="col-md-4 control-label">结束时间</label>
+          <div class="col-md-6">
+            <div class="input-append date form_datetime">
+                <input name="endTime" id="endTime" type="text" value="" class=" form-control">
+                <span class="add-on"><i class="icon-th"></i></span>
+            </div>
+            <script type="text/javascript">
+				$(".form_datetime").datetimepicker({
+					format: "yyyy-MM-dd hh:mm:ss",
+					 language: 'zh-CN',
+					minView: "hour",//设置只显示到月份
+					  initialDate: new Date(),//初始化当前日期
+					  autoclose: true,//选中自动关闭
+					  todayBtn: true//显示今日按钮
+				});
+			</script>
+          </div>
+        </div>
+       </div>
+       
+       <div class="row">
+        <div class="form-group col-md-5">
+          <label for="showAnswer" class="col-md-4 control-label">公布答案</label>
+          <div class="col-md-6">
+          <select name="showAnswer" id="showAnswer" class="form-control">
+             <option value="1">是</option>
+             <option value="2">否</option>
+          </select>
+          </div>
+        </div>
+        <div class="form-group col-md-5">
+          <label for="showType"  class="col-md-4 control-label">显示形式</label>
+          <div class="col-md-6">
+          <select name="showType" id="showType" class="form-control">
+             <option value="1">整卷展示</option>
+             <option value="2">单题展示</option>
+          </select>
+          </div>
+        </div>
+       </div>
+       
+       <div class="row">
+        <div class="form-group col-md-5">
+          <label for="paperType" class="col-md-4 control-label">试卷类型</label>
+          <div class="col-md-6">
+          <select name="paperType" id="paperType" class="form-control">
+             <option value="1">普通试卷</option>
+             <option value="2">随机试卷</option>
+          </select>
+          </div>
+        </div>
+        <div class="form-group col-md-5">
+          <label for="questionOrder"  class="col-md-4 control-label">试题排列顺序</label>
+          <div class="col-md-6">
+          <select name="questionOrder" id="questionOrder" class="form-control">
+             <option value="1">原始顺序</option>
+             <option value="2">随机顺序</option>
+          </select>
+          </div>
+        </div>
+       </div>
+       
+       
+       <div class="row">
+        <div class="form-group col-md-5">
+          <label for="paperScore" class="col-md-4 control-label">卷面总分</label>
+          <div class="col-md-6">
+          <input type="number" name="paperScore" id="paperScore" class="form-control" placeholder="必须输入" required/>
+          </div>
+        </div>
+        <div class="form-group col-md-5">
+          <label for="passScore"  class="col-md-4 control-label">及格分</label>
+          <div class="col-md-6">
+          <input type="number" name="passScore" id="passScore" class="form-control" placeholder="必须输入" required/>
+          </div>
+        </div>
+       </div>
+       
+       
+       <div class="row">
+        <div class="form-group">
+          <label for="paperRemark" class="col-md-offset-1 col-md-1 control-label" style="margin-left:66px">试卷说明</label>
+          <div class="col-md-7">
+          <textarea id="paperRemark" name="paperRemark" class="form-control" rows="7"></textarea>
+          </div>
+        </div>
+       </div>
+       
+       <div class="row">
+        <div class="form-group">
+          
+          <div class="col-md-offset-2 col-md-2">
+            <button type="button" class="form-control btn-info">新增策略项</button>
+          </div>
+        </div>
+       </div>
+       
+       <div class="row">
+        <div class="form-group">
+          <label class="col-md-offset-1 col-md-1 control-label" style="margin-left:66px">策略项</label>
+          
+          <div class="col-md-10">
+          
+          <div class="row">
+          <div class="col-md-2">
+          	 <select name="questionBank" class="form-control">
+               <option value="-1">选择题库</option>
+               <option value="1">测试题库</option>
+               <option value="2">Java基础</option>
+             </select>
+          </div>
+          
+          <div class="col-md-2">
+          	 <select name="questionType" class="form-control">
+               <option value="-1">选择题型</option>
+               <option value="1">单选题</option>
+               <option value="2">多选题</option>
+             </select>
+          </div>
+          <div class="col-md-2">
+          	 <select name="difficultType" class="form-control">
+               <option value="-1">选择难易度</option>
+               <option value="1">非常容易</option>
+               <option value="2">比较容易</option>
+               <option value="2">常规</option>
+               <option value="2">比较难</option>
+               <option value="2">非常难</option>
+             </select>
+          </div>
+          <div class="col-md-2">
+          	 <input type="number" name="questionCount" class="form-control" placeholder="题数"/>
+          </div>
+          <div class="col-md-2">
+          	 <input type="number" name="questionScore" class="form-control" placeholder="题分"/>
+          </div>
+          </div>
+          
+          <div class="row">
+          <div class="col-md-2">
+          	 <select name="questionBank" class="form-control">
+               <option value="-1">选择题库</option>
+               <option value="1">测试题库</option>
+               <option value="2">Java基础</option>
+             </select>
+          </div>
+          
+          <div class="col-md-2">
+          	 <select name="questionType" class="form-control">
+               <option value="-1">选择题型</option>
+               <option value="1">单选题</option>
+               <option value="2">多选题</option>
+             </select>
+          </div>
+          <div class="col-md-2">
+          	 <select name="difficultType" class="form-control">
+               <option value="-1">选择难易度</option>
+               <option value="1">非常容易</option>
+               <option value="2">比较容易</option>
+               <option value="2">常规</option>
+               <option value="2">比较难</option>
+               <option value="2">非常难</option>
+             </select>
+          </div>
+          <div class="col-md-2">
+          	 <input type="number" name="questionCount" class="form-control" placeholder="题数"/>
+          </div>
+          <div class="col-md-2">
+          	 <input type="number" name="questionScore" class="form-control" placeholder="题分"/>
+          </div>
+          <div class="col-md-1">
+          	 <img  src="../images/icos/delete.png" class="form-control"/>
+          </div>
+          </div>
+          
+          <div class="row">
+          <div class="col-md-2">
+          	 <select name="questionBank" class="form-control">
+               <option value="-1">选择题库</option>
+               <option value="1">测试题库</option>
+               <option value="2">Java基础</option>
+             </select>
+          </div>
+          
+          <div class="col-md-2">
+          	 <select name="questionType" class="form-control">
+               <option value="-1">选择题型</option>
+               <option value="1">单选题</option>
+               <option value="2">多选题</option>
+             </select>
+          </div>
+          <div class="col-md-2">
+          	 <select name="difficultType" class="form-control">
+               <option value="-1">选择难易度</option>
+               <option value="1">非常容易</option>
+               <option value="2">比较容易</option>
+               <option value="2">常规</option>
+               <option value="2">比较难</option>
+               <option value="2">非常难</option>
+             </select>
+          </div>
+          <div class="col-md-2">
+          	 <input type="number" name="questionCount" class="form-control" placeholder="题数"/>
+          </div>
+          <div class="col-md-2">
+          	 <input type="number" name="questionScore" class="form-control" placeholder="题分"/>
+          </div>
+          <div class="col-md-1">
+          	 <img  src="../images/icos/delete.png" class="form-control"/>
+          </div>
+          </div>
+          
+          </div>
+          
+        </div>
+       </div>
+       
+       <div class="row">
+        <div class="form-group">
+          <label for="examTarget" class="col-md-offset-1 col-md-1 control-label" style="margin-left:66px">目标部门</label>
+          <div class="col-md-7">
+          <input type='checkbox' name="examTarget" value="1"/>测试部门
+          <input type='checkbox' name="examTarget" value="2"/>测试部门
+          <input type='checkbox' name="examTarget" value="3"/>测试部门
+          <input type='checkbox' name="examTarget" value="4"/>测试部门
+          </div>
+        </div>
+       </div>
+       
+       
+       <div class="row">
+        <div class="form-group">
+          <div class="col-md-offset-2 col-md-1">
+          <button type="submit" class="form-control btn-primary ">提交</button>
+          </div>
+          <div class="col-md-1">
+          <button type="reset" class="form-control ">取消</button>
+          </div>
+       </div>
+        
+        
+     </form>
+     </div>
+     <script type="text/javascript">
+	    function toChangeQuestionType(value){
+			location.href="addQuestion_"+value+".html";
+		}
+	 </script>
+     <!-- InstanceEndEditable -->
+     </div>
+  </div>
+</div>
+</body>
+<!-- InstanceEnd --></html>

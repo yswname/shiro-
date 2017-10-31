@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+   <include file="struts-default.xml"></include>
+   <include file="struts-plugin.xml"></include>
+   
+   <!-- 告诉struts框架，使用spring插件从ioc容器中获取需要的Action对象 -->
+   <constant name="struts.objectFactory" value="spring"></constant>
+   
+   <package name="demo" extends="struts-default" namespace="/demo">
+       <action name="userAction" class="userAction">
+          <result name="successAdd">/success.jsp</result>
+          <result name="successEdit">/success.jsp</result>
+          <result name="successDelete">/success.jsp</result>
+          <result name="successQuery">/success.jsp</result>
+       </action>
+       <action name="orderAction" class="orderAction">
+          <result name="successAdd">/success.jsp</result>
+          <result name="successEdit">/success.jsp</result>
+          <result name="successDelete">/success.jsp</result>
+          <result name="successQuery">/success.jsp</result>
+       </action>
+   </package>
+   
+   <package name="t" extends="json-default" namespace="/">
+     <action name="roleAction" class="roleAction">
+        <result name="success">/roleList.jsp</result>
+        <result name="success1">/roleList.jsp</result>
+     </action>
+     <action name="resourceAction" class="resourceAction">
+        <result name="addSuccess" type="json"></result>
+        <result name="initAddSuccess">/WEB-INF/jsp/permission/addResource.jsp</result>
+        <result name="findSuccess">/WEB-INF/jsp/permission/resourceList.jsp</result>
+        <result name="viewSuccess">/WEB-INF/jsp/permission/editResource.jsp</result>
+     </action>
+     <action name="userAction" class="userAction">
+          <result name="successAdd" type="json"></result>
+          <result name="successEdit">/success.jsp</result>
+          <result name="successDelete">/success.jsp</result>
+          <result name="successQuery">/success.jsp</result>
+       </action>
+  </package>
+</struts>    

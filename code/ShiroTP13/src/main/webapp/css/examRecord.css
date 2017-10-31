@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+.panel-title{
+	font-weight:bold;
+	color:black;
+}
+.questionTitle div{
+	float:left;
+}
+.modal-title{
+	width:500px;
+}
+.questionResult{
+	float:right;
+}
+
+.answerItem{
+	clear:both;
+}
+.answer{
+	clear:both;
+}
+.questionNumber{
+	width:30px;
+	height:30px;
+	background-color:#00F;
+	color:white;
+	text-align:center;
+}
+.score{
+	width:20px;
+	height:30px;
+	color:#00f;
+	font-size:18px;
+	font-weight:bold;
+}
+
+.answerCards{
+	border:1px solid #CFEFED;
+	width:220px;
+	height:300px;
+	position:fixed;
+	top:30px;
+	left:652px;
+}
+.answerCard{
+	border:1px solid #C8FFE3;
+	width:42px;
+	height:42px;
+	float:left;
+	text-align:center;
+	line-height:42px;
+	margin-left:1px;
+	margin-top:1px;
+}
+.answeredCard{
+	background-color:#A6FFA6;
+}
+
